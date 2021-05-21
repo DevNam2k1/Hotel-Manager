@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		Hotel hotel = new Hotel();
 		
@@ -20,7 +21,10 @@ public class Main {
 				   String name = scanner.nextLine();
 				   System.out.println("Enter age: ");
 				   int age = scanner.nextInt();
+				   System.out.println("Enter passport:");
+				   scanner.nextLine();
 				   String passport = scanner.nextLine();
+				   
 				   System.out.println("Choise a to rent room type A");
 				   System.out.println("Choise b to rent room type B");
 				   System.out.println("Choise c to rent room type C");
@@ -38,6 +42,7 @@ public class Main {
 				   
 				   System.out.println("Enter number day for rent");
 				   int numberRent = scanner.nextInt();
+				  
 				   Person person = new Person(name, age, passport, room, numberRent);
 				   hotel.add(person);
 				   scanner.nextLine();
